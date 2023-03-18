@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</head>
+<body>
+    <!-- <% for(let i=0; i<data.length; i++){ %>
+        <p>UID: <%= data[i].uid %></p>
+        <p>Name: <%= data[i].name %></p>
+        <p>desc: <%= data[i].combinedData.desc %></p>
+
+        <p>Main: <%= data[i].main %></p>
+        <p>Image: <%= data[i].image %></p>
+        <p>Location: <%= data[i].location %></p>
+        <p>Price: <%= data[i].price %></p>
+        <p>Niche: <%= data[i].niche %></p>
+        <p>Combined Data:</p>
+        <ul>
+          <% for(let j=0; j<data[i].combinedData.length; j++){ %>
+            <p>desc: <%= data[i].combinedData[j].desc %></p>
+            <li><%= data[i].combinedData[j].images %></li>
+
+
+            <% for(let j=0; j<data[i].combinedData.length; j++){ %>
+                
+                <% for(let k=0; k<data[i].combinedData[j].packages.length; k++){ %>
+                  <li><%= data[i].combinedData[j].packages[k].name %></li>
+                  <li><%= data[i].combinedData[j].packages[k].desc%></li>
+                  <li><%= data[i].combinedData[j].packages[k].type%></li>
+                  <li><%= data[i].combinedData[j].packages[k].price %></li>
+                <% } %>
+
+
+
+          <% } %>
+        </ul>
+      <% } %>
+       -->
+       <% for(let i=0; i<data.length; i++){ %>
+        <p>UID: <%= data[i].uid %></p>
+        <p>Name: <%= data[i].name %></p>
+        <p>desc: <%= data[i].combinedData.desc %></p>
+      
+        <p>Main: <%= data[i].main %></p>
+        <p>Image: <%= data[i].image %></p>
+        <p>Location: <%= data[i].location %></p>
+        <p>Price: <%= data[i].price %></p>
+        <p>Niche: <%= data[i].niche %></p>
+        <p>Combined Data:</p>
+        <ul>
+          <% for(let j=0; j<data[i].combinedData.length; j++){ %>
+            <p>desc: <%= data[i].combinedData[j].desc %></p>
+            <li><%= data[i].combinedData[j].images %></li>
+            <li><%= data[i].combinedData[j].packages[j].name %></li>
+          <% } %>
+        </ul>
+      
+       
+        <% } %>
+
+
+        
+      <% } %>
+   
+</body>
+</html>

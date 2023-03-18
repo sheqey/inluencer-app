@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Sales Graph</title>
+    <style>
+      #graph {
+        width: 800px;
+        height: 400px;
+        border: 1px solid #ccc;
+        margin: 20px auto;
+        position: relative;
+      }
+      
+      #graph .x-axis, #graph .y-axis {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        bottom: 0;
+        margin: 0;
+        padding: 0;
+        font-size: 12px;
+        font-family: Arial, sans-serif;
+      }
+      
+      #graph .x-axis {
+        text-align: center;
+        display: flex;
+        justify-content: space-between;
+      }
+      
+      #graph .y-axis {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      
+      #graph .x-axis li, #graph .y-axis li {
+        list-style: none;
+        position: absolute;
+        margin: 0;
+        padding: 0;
+        border-left: 1px solid #ccc;
+        border-top: 1px solid #ccc;
+      }
+      
+      #graph .x-axis li {
+        bottom: -20px;
+        transform: translateX(-50%);
+      }
+      
+      #graph .y-axis li {
+        left: -20px;
+        transform: translateY(-50%);
+      }
+      
+      #graph .bar {
+  position: absolute;
+  bottom: 0;
+  width: 20px;
+  background-color: #007bff;
+  border-radius: 5px 5px 0 0;
+  transition: height 0.3s ease-out;
+  margin-right: 10px;
+}
+
+
+      
+      #graph .bar:hover {
+        height: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="graph"></div>
+    <script>
+      // Generate some sample data
+      const data = [
+        { day: 1, sales: 10 },
+        { day: 2, sales: 5 },
+        { day: 3, sales: 8 },
+        { day: 4, sales: 12 },
+        { day: 5, sales: 15 },
+        { day: 6, sales: 20 },
+        { day: 7, sales: 18 },
+        { day: 8, sales: 12 },
+        { day: 9, sales: 15 },
+        { day: 10, sales: 20 },
+        { day: 11, sales: 18 },
+        { day: 12, sales: 22 },
+        { day: 13, sales: 25 },
+        { day: 14, sales: 30 },
+        { day: 15, sales: 35 },
+        { day: 16, sales: 40 },
+        { day: 17, sales: 38 },
+        { day: 18, sales: 42 },
+        { day: 19, sales: 45 },
+        { day: 20, sales: 50 },
+        { day: 21, sales: 55 },
+        { day: 22, sales: 60 },
+        { day: 23, sales: 65 },
+        { day: 24, sales: 70 },
+        { day: 25, sales: 75 },
+        { day: 26, sales: 80 },
+{ day: 27, sales: 85 },
+{ day: 28, sales: 90 },
+{ day: 29, sales: 95 },
+{ day: 30, sales: 100 }
+];  // Get the graph container element
+  const graphContainer = document.getElementById('graph');
+
+  // Calculate the maximum sales value to use for scaling the graph
+  const maxSales = Math.max(...data.map(item => item.sales));
+
+  // Generate the x-axis ticks and labels
+  const xTicks = Array.from({ length: 30 }, (_, i) => i + 1);
+  const xLabels = xTicks.map(i => `Day ${i}`);
+
+  // Generate the y-axis ticks and labels
+  const yTicks = [0, maxSales / 4, maxSales / 2, (maxSales * 3) / 4, maxSales];
+  const yLabels = yTicks.map(tick => tick.toFixed(2));
+
+  // Create the x-axis element
+  const xAxis = document.createElement('ul');
+  xAxis.className = 'x-axis';
+  xTicks.forEach((tick, index) => {
+    const tickElement = document.createElement('li');
+    tickElement.style.left = `${(tick / 31) * 100}%`;
+    tickElement.textContent = xLabels[index];
+    xAxis.appendChild(tickElement);
+  });
+  graphContainer.appendChild(xAxis);
+
+  // Create the y-axis element
+  const yAxis = document.createElement('ul');
+  yAxis.className = 'y-axis';
+  yTicks.forEach((tick, index) => {
+    const tickElement = document.createElement('li');
+    tickElement.style.bottom = `${(tick / maxSales) * 100}%`;
+    tickElement.textContent = yLabels[index];
+    yAxis.appendChild(tickElement);
+  });
+  graphContainer.appendChild(yAxis);
+
+  // Create the bars for the graph
+  data.forEach(item => {
+    const bar = document.createElement('div');
+    bar.className = 'bar';
+    bar.style.height = `${(item.sales / maxSales) * 100}%`;
+    bar.style.left = `${((item.day - 1) / 31) * 100}%`;
+    graphContainer.appendChild(bar);
+  });
+</script>
+</body>
+</html> 

@@ -1,0 +1,157 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 85px;
+    height: 85px;
+}
+
+.header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.full-logo-holder {
+    display: flex;
+    max-height: 35px;
+}
+
+.full-logo-img {
+    width: 121px;
+    height: auto;
+    max-height: 35px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header a {
+    cursor: pointer;
+    color: inherit;
+}
+
+.header a:visited,
+.header a:hover,
+.header a:active {
+    color: inherit;
+}
+
+.header-btn {
+    position: relative;
+    text-decoration: none;
+    font-size: 88%;
+    transition-duration: 0.3s;
+    margin-left: 38px;
+    font-weight: 600;
+}
+
+.header-btn:hover {
+    opacity: 0.7;
+}
+
+.order-notification, .campaign-notification {
+    top: -4px;
+    right: -14px;
+}
+
+.join-btn {
+    background: var(--gradientText);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.upgrade-btn{
+    background-color: #222;
+    color: white !important;
+    border-radius: 50px;
+    padding: 8px 10px;
+    background: var(--gradientText);
+}
+
+.dashboard-btn:hover {
+    opacity: 1 !important;
+}
+
+.dashboard-img {
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.dashboard-menu-holder {
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(191,203,218,.52);
+    border-radius: 50px;
+    padding: 4px 5px 4px 15px;
+}
+
+.dashboard-menu-btn {
+    transform: rotateZ(90deg);
+    margin-right: 12px;
+    font-weight: 600;
+    font-size: 82%;
+}
+
+.dashboard-menu {
+    display: none;
+    position: absolute;
+    border-radius: 8px;
+    box-shadow: var(--darkBoxShadow);
+    background-color: white;
+    top: 44px;
+    left: -65px;
+    z-index: 1;
+    width: calc(100% + 65px);
+    font-size: 95%;
+}
+
+.dashboard-menu-item {
+    padding: 15px;
+    transition-duration: 0.3s;
+    font-weight: 600;
+}
+
+.dashboard-menu-item:last-child {
+    border-top: 1px solid rgba(191,203,218,.52);
+    font-weight: 400;
+}
+
+.dashboard-menu-item:hover {
+    opacity: 0.7;
+}
+
+
+/* Show the dropdown menu on hover */
+
+.dashboard-menu-holder:hover .dashboard-menu {
+    display: block;
+}
+
+@media only screen and (max-width: 800px) {
+    .header-btn {
+        display: none;
+    }
+
+    .header {
+        min-height: 65px;
+        height: 65px;
+    }
+
+    .header-row{
+        width: 92%;
+    }
+
+    .full-logo-img {
+        width: 105px;
+        max-height: 28px;
+    }
+}

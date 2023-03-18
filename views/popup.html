@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bootstrap Modal Example</title>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" integrity="sha512-dtC+vbV/DpPkF9Xt1hOt+yRjx2CHgeZb0q3gofOoza13d0/PVfHbP9XIO5TD5v5xIf7V/e+pEjjrsN7VgBvJdQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- Bootstrap JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js" integrity="sha512-foiISZd8XdI1AbqxvRf5t+ImRu7Vpxn/JMc9XG4Z5wm5l5Db5HZgylwS5B5Dy3aEyFtBgMOzgd/l9X7a1nLxRg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      </head>
+<body>
+    <!-- Button to trigger the modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#insertModal">
+    Add New Product
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="insertModal" tabindex="-1" aria-labelledby="insertModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="insertModalLabel">Add New Product</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="insertForm">
+            <div class="mb-3">
+              <label for="nameInput" class="form-label">Name</label>
+              <input type="text" class="form-control" id="nameInput" required>
+            </div>
+            <div class="mb-3">
+              <label for="imageInput" class="form-label">Image URL</label>
+              <input type="text" class="form-control" id="imageInput" required>
+            </div>
+            <div class="mb-3">
+              <label for="priceInput" class="form-label">Price</label>
+              <input type="number" class="form-control" id="priceInput" required>
+            </div>
+            <div class="mb-3">
+              <label for="classInput" class="form-label">Class</label>
+              <input type="text" class="form-control" id="classInput" required>
+            </div>
+            <div class="mb-3">
+              <label for="descInput" class="form-label">Description</label>
+              <textarea class="form-control" id="descInput" rows="3" required></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="quantityInput" class="form-label">Quantity</label>
+              <input type="number" class="form-control" id="quantityInput" required>
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="hotCheck" checked>
+              <label class="form-check-label" for="hotCheck">Hot</label>
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="bsCheck" checked>
+              <label class="form-check-label" for="bsCheck">BS</label>
+            </div>
+            <div class="mb-3">
+              <label for="feInput" class="form-label">FE</label>
+              <input type="text" class="form-control" id="feInput" value="true" readonly>
+            </div>
+            <div class="mb-3">
+              <label for="fdInput" class="form-label">FD</label>
+              <input type="number" class="form-control" id="fdInput" value="true" readonly>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" onclick="insertData()">Add Product</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    // Get the form element
+const insertForm = document.getElementById('insertForm');
+
+// Add a submit event listener to the form
+insertForm.addEventListener('submit', (event) => {
+  event.preventDefault(); // prevent the form from submitting normally
+alert(98)
+  // Get the form data
+  const formData = new FormData(insertForm);
+
+  // Send a POST request to the server with the form data
+  fetch('/save', {
+    method: 'POST',
+    body: formData
+  })
+  .then(response => response.json())
+  .then(data => {
+    console.log(data); // log the response data
+    insertForm.reset(); // reset the form after successful submission
+    // TODO: handle success message or redirect to success page
+  })
+  .catch(error => {
+    console.error(error); // log any errors
+    // TODO: handle error message or redirect to error page
+  });
+});
+
+  </script>
+</body>
+</html>

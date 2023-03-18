@@ -1,0 +1,727 @@
+.listing-holder {
+    width: 80%;
+    margin: 0 auto 4% auto;
+}
+
+.btn-row{
+    width: 80%;
+    margin: 2% auto 1% auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.row-btn{
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    padding: 10px 16px;
+    font-size: 90%;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 0 0 0 1%;
+    transition-duration: 0.3s;
+}
+
+.row-btn:hover{
+    opacity: 0.8;
+}
+
+.row-btn-img{
+    width: 14px;
+    margin-right: 6px;
+}
+
+.history{
+    margin: auto auto 0 0;
+    padding: 5px 10px;
+    border-radius: 50px;
+    font-size: 80%;
+    font-weight: 500;
+}
+
+.history-succ{
+    color: green;
+    background-color: var(--green);
+}
+
+.history-err{
+    color: red;
+    background-color: var(--red);
+}
+
+/********************** images *************************/
+
+.listing-holder .img-row {
+    display: flex;
+    height: 440px;
+    justify-content: space-between;
+}
+
+.listing-holder .primary-img {
+    width: 57.5%;
+}
+
+.listing-holder .img-col {
+    display: flex;
+    flex-direction: column;
+    width: 42%;
+    justify-content: space-between;
+}
+
+.listing-holder .img-row-sq {
+    display: flex;
+    height: 50%;
+    margin: 0 0 1% 0;
+}
+
+.listing-holder .img-row-sq .file-area {
+    width: 100%;
+}
+
+.listing-holder .img-row-sq .file-area:first-child {
+    margin-right: 1%;
+}
+
+.listing-holder .file-area {
+    height: 100%;
+    border-radius: 8px;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+
+.listing-holder .file-area:hover {
+    opacity: 0.7;
+}
+
+.listing-holder .img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.listing-holder .img1 {
+    border-radius: 8px 0 0 8px;
+}
+
+.listing-holder .img3 {
+    border-radius: 0 8px 0 0;
+}
+
+.listing-holder .img4 {
+    border-radius: 0 0 8px 0;
+}
+
+.listing-holder .file-area4 {
+    height: calc(220px - 1%);
+}
+
+.listing-holder .img-row-full {
+    height: 100%;
+    margin-bottom: 0;
+}
+
+.listing-holder .img-row-full .img3 {
+    border-radius: 0 8px 8px 0;
+}
+
+.listing-holder .primary-img1 {
+    width: 100%;
+}
+
+.listing-holder .primary-img1 .img1 {
+    border-radius: 8px;
+}
+
+
+/********************** images end *********************/
+
+.listing-cols {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2%;
+}
+
+.listing-col-l {
+    width: 58%;
+}
+
+.listing-col-r {
+    width: 37%;
+}
+
+.listing-title {
+    font-size: 130%;
+    font-weight: 600;
+    margin: 0;
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    margin: 7% 0 4% 0;
+    font-size: 120%;
+    font-weight: 600;
+}
+
+.listing-description {
+    line-height: 1.4;
+    font-size: 95%;
+    margin-top: 2%;
+    font-weight: 300;
+}
+
+
+/***************** packages *******************/
+
+.filter-input {
+    margin-left: 12px;
+    width: 165px;
+    height: 28px;
+    min-height: 28px !important;
+}
+
+.listing-holder .package-holder {
+    border-radius: 8px;
+    box-shadow: var(--lightBoxShadow);
+    padding: 18px 20px 24px 20px;
+    margin-bottom: 5%;
+    position: relative;
+    border-left: 8px solid #bfc6ca;
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+
+.listing-holder .package-holder:hover {
+    background-color: #fafafa;
+}
+
+.package-category {
+    font-size: 74%;
+    color: var(--lightGray);
+    margin-bottom: 3px;
+}
+
+.packages-holder .package-title{
+    font-size: 100%;
+    font-weight: 600;
+    margin: 0;
+}
+
+.package-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 112%;
+    font-weight: 600;
+}
+
+.package-btn-holder {
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+}
+
+.package-btn {
+    margin-left: 12px;
+    border: 1.5px solid rgba(0, 0, 0, .2);
+    border-radius: 50%;
+    width: 11px;
+    height: 11px;
+}
+
+.package-active {
+    border-left: 8px solid var(--purple) !important;
+}
+
+.btn-active {
+    background-color: var(--purple);
+}
+
+.package-description {
+    line-height: 1.4;
+    margin-top: 3%;
+    font-size: 85%;
+    font-weight: 300;
+    padding-bottom: 2%;
+    white-space: pre-line;
+}
+
+/***************** packages end ***************/
+
+
+/***************** faq ***************/
+
+.faq-holder {
+    margin-bottom: 3%;
+    padding-bottom: 3%;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    cursor: pointer;
+}
+
+.faq-question {
+    font-weight: 600;
+    font-size: 100%;
+    margin: 0;
+}
+
+.faq-answer {
+    display: none;
+    margin-top: 2%;
+    font-weight: 300;
+    font-size: 85%;
+}
+
+
+/***************** faq end ***************/
+
+/**************** portfolio ************/
+
+.portfolio-arrow-holder{
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.portfolio-arrow{
+    width: 14px;
+    margin-left: 6px;
+    cursor: pointer;
+}
+
+.disabled-arrow{
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.portfolio-holder{
+    display: flex;
+    overflow-x: scroll;
+}
+
+.portfolio-content-holder{
+    margin: 0 3% 0 0;
+    height: 310px;
+    width: 32%;
+    min-width: 210px;
+    position: relative;
+    cursor: pointer;
+}
+
+.portfolio-content-holder:last-child{
+    margin: 0 !important;
+}
+
+.portfolio-content-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.play-btn-holder{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(to bottom, transparent 0%, #0000009e 100%);
+    border-radius: 0 0 8px 8px;
+}
+
+.play-btn{
+    width: 20px;
+    margin-bottom: 11px;
+    margin-left: 11px;
+}
+
+/**************** profile ********************/
+
+.profile-holder {
+    margin-bottom: 9%;
+}
+
+.profile-info-holder {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.profile-pic {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 3%;
+}
+
+.profile-name {
+    display: flex;
+    align-items: center;
+    margin: 1% 0;
+    font-weight: 600;
+    transition-duration: 0.3s;
+}
+
+.verified-badge{
+    width: 14px;
+    margin-left: 4px;
+}
+
+.profile-location {
+    color: var(--lightGray);
+    font-size: 75%;
+}
+
+.platform-img-holder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2% 0;
+    width: 100%;
+}
+
+.platform-img {
+    margin: 0 2%;
+    width: 18px;
+    cursor: pointer;
+    position: relative;
+}
+
+.platform-img img{
+    width: 100%;
+    height: 100%;
+}
+
+/**************** profile end ****************/
+
+
+/**************** checkout ***************/
+
+.checkout-area{
+    position: sticky;
+    top: 80px;
+}
+
+.listing-holder .checkout-holder {
+    border-radius: 8px;
+    box-shadow: var(--lightBoxShadow);
+    padding: 25px 20px;
+}
+
+.listing-holder .checkout-title {
+    font-size: 115%;
+    font-weight: 600;
+}
+
+.listing-holder .checkout-holder .input {
+    margin: 5% 0;
+    height: 50px;
+    width: 100%;
+}
+
+.listing-holder .checkout-price {
+    font-size: 160%;
+    font-weight: 300;
+}
+
+.listing-holder .checkout-description-holder {
+    font-size: 80%;
+    font-weight: 300;
+    margin: 3% 0;
+}
+
+.listing-holder .checkout-holder .btn {
+    background-color: var(--black);
+    color: white;
+    margin: 10% auto 0 auto;
+    width: 100%;
+    padding: 15px;
+}
+
+.msg-btn{
+    font-weight: 300;
+    text-align: center;
+    font-size: 85%;
+    margin-top: 4%;
+    margin-bottom: -5px;
+    cursor: pointer;
+}
+
+.msg-btn:hover, .how-it-works-btn:hover{
+    text-decoration: underline;
+}
+
+.how-it-works-btn{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    font-size: 100%;
+    margin-top: 6%;
+    cursor: pointer;
+}
+
+.how-it-works-btn-img{
+    width: 16px;
+    max-height: 19px;
+    margin-right: 5px;
+}
+
+
+/**************** checkout end ***************/
+
+/**************** recommendations ************/
+
+.profile-strength-holder {
+    border-radius: 8px;
+    box-shadow: var(--lightBoxShadow);
+}
+
+.strength-holder{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 20px;
+}
+
+.strength-title {
+    font-size: 115%;
+    font-weight: 600;
+}
+
+.strength-bar-holder{
+    display: flex;
+    align-items: center;
+    width: 55%;
+}
+
+.strength-bar {
+    position: relative;
+    background-color: rgba(191,203,218,.4);
+    width: 100%;
+    height: 10px;
+    border-radius: 50px;
+}
+
+.strength-progress {
+    position: absolute;
+    height: 100%;
+    border-radius: 50px;
+    left: 0;
+    bottom: 0;
+}
+
+.strength-num{
+    margin-left: 10px;
+    font-size: 115%;
+    font-weight: 600;
+}
+
+.recommendation-holder{
+    display: flex;
+    align-items: center;
+    padding: 25px 20px;
+    border-top: 1px solid rgba(191,203,218,.4);
+}
+
+.recommendation-holder.js-recommendation-holder{
+    cursor: pointer;
+}
+
+.recommendation-box{
+    position: relative;
+    height: 15px;
+    width: 15px;
+    border-radius: 5px;
+    border: 2px solid rgba(191,203,218,.5);
+    margin-right: 8px;
+}
+
+.recommendation-box-fill{
+    height: 100%;
+    width: 100%;
+    background-color: var(--green);
+    border-radius: 5px;
+    position: absolute;
+    border: 2px solid var(--green);
+    top: -2px;
+    left: -2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: green;
+}
+
+.recommendation-num{
+    padding: 4px 8px;
+    background-color: var(--green);
+    color: green;
+    font-weight: 500;
+    border-radius: 8px;
+    font-size: 90%;
+    margin-left: auto;
+}
+
+.recommendation-edit-btn{
+    margin-left: auto;
+    font-size: 86%;
+    cursor: pointer;
+    color: gray;
+    text-decoration: underline;
+}
+
+/************* recommendations end ************/
+
+/************** badge *****************/
+
+.profile-info-holder .profile-listing-badge-holder{
+    display: flex;
+    margin-top: 8px;
+}
+
+.profile-info-holder .profile-listing-badge{
+    display: flex;
+    align-items: end;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    padding: 5px;
+    margin: 0 5px;
+    box-shadow: var(--lightBoxShadow);
+    cursor: pointer;
+}
+
+.profile-info-holder .profile-listing-badge-img {
+    width: 15px;
+    margin-right: 3px;
+}
+
+.profile-info-holder .profile-listing-badge-title {
+    font-weight: 600;
+    font-size: 77%;
+    color: white;
+}
+
+.profile-info-holder .profile-listing-badge-holder .tooltip-txt{
+    top: 28px !important;
+}
+
+/************** badge end *****************/
+
+/**************** similar profiles ***********/
+
+.similar-creators-title{
+    font-size: 145%;
+    font-weight: 600;
+    margin: 12% 0 4% 0;
+}
+
+.listing-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.featured-profile-listing-holder {
+    width: 24%;
+    min-width: 160px;
+}
+
+/**************** similar profiles end ***********/
+
+@media only screen and (max-width: 1000px) {
+    .listing-row {
+        overflow-x: scroll;
+    }
+
+    .featured-profile-listing-holder {
+        margin: 0 3% 0 0;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .btn-row{
+        width: 95%;
+        margin: 0 auto 3% auto;
+    }
+
+    .history{
+        padding: 8px 10px;
+        font-size: 65%;
+    }
+
+    .listing-holder {
+        width: 100%;
+        margin: 0 auto 6% auto;
+    }
+
+    .listing-holder .img-row {
+        height: fit-content;
+        flex-direction: column;
+    }
+
+    .listing-holder .primary-img, .img-col {
+        width: 100% !important;
+    }
+
+    .listing-holder .img-col {
+        height: 200px;
+    }
+
+    .listing-holder .img, .file-area {
+        border-radius: 0 !important;
+    }
+    .listing-holder .img-row-sq {
+        height: 100%;
+    }
+
+    .listing-holder .primary-img, .img-row-sq {
+        height: 210px;
+    }
+
+    .listing-holder .img-row-sq .file-area:first-child {
+        margin-right: 0;
+    }
+
+    .listing-holder .file-area4 {
+        display: none;
+    }
+
+    .listing-cols {
+        flex-direction: column;
+        margin: 5% auto 0 auto;
+        width: 92%;
+    }
+
+    .listing-col-l, .listing-col-r {
+        width: 100%;
+        margin-bottom: 10%;
+    }
+
+    .tooltip .tooltip-txt {
+        width: 150px !important;
+    }
+
+    .checkout-area{
+        position: initial;
+        top: 0;
+    }
+
+    .section-title {
+        margin: 11% 0 6% 0;
+    }
+
+    .filter-input {
+        width: 100%;
+    }
+
+    .portfolio-arrow-holder{
+        display: none;
+    }
+
+    .portfolio-content-holder {
+        height: 250px;
+        min-width: 170px;
+    }
+
+    .similar-creators-holder{
+        width: 92%;
+        margin: 0 auto;
+    }
+}
